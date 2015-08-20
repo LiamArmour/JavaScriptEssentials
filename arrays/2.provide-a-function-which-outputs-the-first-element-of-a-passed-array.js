@@ -1,3 +1,5 @@
-/**
- * Created by liam.armour on 20/08/15.
- */
+'use strict'
+var cars = ["Saab", "Volvo", "BMW"];
+console.log(cars[0]);
+
+//This runes the first element 
