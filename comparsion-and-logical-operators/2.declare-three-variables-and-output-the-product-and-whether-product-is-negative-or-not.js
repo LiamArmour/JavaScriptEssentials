@@ -1,5 +1,12 @@
 'use strict'
-var variableOne = 10;
-var variableTwo = 15;
-var variableThree = 25;
+var variableOne = 11;
+var variableTwo = 11;
+var variableThree = -21;
 
+var product = (variableOne * variableTwo * variableThree);
+
+if (product < 0) {
+    console.log("Negative man!!!");
+} else {
+    console.log("Positive yeyy!!!");
+}
