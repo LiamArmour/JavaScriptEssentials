@@ -1,3 +1,4 @@
+'use strict'
 var calculation = function(boyName, girlName) {
     var foo = (boyName.length + girlName.length)-(Math.random()*6);
     var result = foo * 42;
