@@ -1,3 +1,4 @@
+'use strict'
 findHypo(3,4);
 console.log(Hypo);
 

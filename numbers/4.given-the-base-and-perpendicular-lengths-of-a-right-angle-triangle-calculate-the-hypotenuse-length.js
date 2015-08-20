@@ -1,3 +1,4 @@
+'use strict'
 var opp = 20;
 var adj = 19;
 

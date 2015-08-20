@@ -1,3 +1,4 @@
+'use strict'
 var celsius = 20;
 
 F = celsius * 9 / 5 + 32;
