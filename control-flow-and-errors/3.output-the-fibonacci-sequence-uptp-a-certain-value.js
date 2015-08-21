@@ -1,8 +1,7 @@
-fib = function(numMax){
-    for(i=0,j=1,k=0; k<numMax;i=j,j=x,k++ ){
-        x=i+j;
-        console.log(x);
-    }
-}
+var fibArray=[0,1];
 
-fib(10)
+for(var i = 1; i < 10; i++) {
+    var result =fibArray[i-1]+fibArray[i];
+    fibArray.push(result);
+}
+console.log(fibArray);
