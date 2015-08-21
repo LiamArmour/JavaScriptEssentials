@@ -1,7 +1,8 @@
-var fibArray=[0,1];
+'use strict';
+var fib=[0,1];
 
 for(var i = 1; i < 10; i++) {
-    var result =fibArray[i-1]+fibArray[i];
-    fibArray.push(result);
+    var result =fib[i-1]+fib[i];
+    fib.push(result);
 }
-console.log(fibArray);
+console.log(fib);
