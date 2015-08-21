@@ -1,14 +1,16 @@
 'use strict';
-function makeTringle(size) {
-    var stars = "";
-    var spacesLeft = "";
-    var spacesRight = "";
-    for(var i = 0 ; i < size ; i++) {
-        stars += "*";
-        spacesLeft += " ";
-        spacesRight += " ";
-        console.log(spacesLeft, stars, spacesRight);
+
+function equilateralTriangle(numRows){
+    var stars = '';
+    var spaces = '';
+    for(var i = 0 ; i < numRows; i++){
+        spaces = '';
+        for(var j = numRows -1-i; j > 0; j--) {
+            spaces += ' ';
+        }
+        stars += '*';
+        stars += stars.length > 1 ? '*' : '';
+        console.log(spaces+stars);
     }
 }
-
-makeTringle(10, 2, 10);
+equilateralTriangle(15);
