@@ -1,3 +1,4 @@
+'use strict';
 function Node(valueOfNode){
     var me = this;
     me.value = valueOfNode;

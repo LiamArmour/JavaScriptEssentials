@@ -1,7 +1,7 @@
 'use strict';
 
 (function(){
-    var linkedList = function(){
+    var list = function(){
 
         var instanceOfLinkedList = Object.create(methodsOfLinkedList);
         instanceOfLinkedList.head = null;
@@ -42,22 +42,22 @@
     };
 
     var makeNode = function(value){
-        var instanceOfNode = {
+        var position = {
             data: value,
             next: null
         };
-        return instanceOfNode;
+        return position;
     };
 
-    var makeLinkedList = linkedList();
-    makeLinkedList.add(1, 2, 3, 4, 5);
-    console.log("Does 1 exist? " + makeLinkedList.contains(1));
-    console.log("Does 2 exist? " + makeLinkedList.contains(2));
+    var createNewList = list();
+    createNewList.add(1, 2, 3, 4, 5);
+    console.log("Does 1 exist? " + createNewList.contains(1));
+    console.log("Does 2 exist? " + createNewList.contains(2));
     console.log("-- Now lets remove the first list item");
-    makeLinkedList.remove();
-    console.log("Does 1 exist? " + makeLinkedList.contains(1));
-    makeLinkedList.remove();
+    createNewList.remove();
+    console.log("Does 1 exist? " + createNewList.contains(1));
+    createNewList.remove();
     console.log("-- Now lets remove the next first list item, this should remove 2");
-    console.log("Does 2 exist? " + makeLinkedList.contains(2));
+    console.log("Does 2 exist? " + createNewList.contains(2));
 
 })();

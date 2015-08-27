@@ -1,57 +1,94 @@
-//Create an object constructor function for a doubly-linked list. This has all the functionality of a singly-linked
-// list, but links to and manages the previous item also.
+'use strict';
+function Node(valueOfNode){
+    var me = this;
+    me.value = valueOfNode;
+    me.next = null;
+    me.previous = null;
+    var nodeNumber = 0;
 
-var firstNode = {
-    data: 12,
-    next: null,
-    prev: null
-};
+    this.deletePrevious = function(){
+        if(me.previous === null){
+            return;
+        }
+        else if( me.previous.previous === null){
+            return me;
+        }
+        else {
+            me.previous = me.previous.previous;
+        }
+    };
 
-var secondNode = {
-    data: 99,
-    prev: firstNode,    //set pointer #1
-    next: null
-};
+    this.removeNext = function(){
+        if(me.next === null){
+            return;
+        }
+        else if( me.next.next === null){
+            me.next = null;
+        }
+        else {
+            me.next = me.next.next;
+        }
+    };
 
-firstNode.next = secondNode;    //set pointer #2
+    this.insertItemAfter = function(newNode){
+        if(me.next !== null){
+            newNode.next = me.next;
+            newNode.previous = me;
+            newNode.next.previous = newNode;
+            newNode.previous.next = newNode;
+        }
+        else {
+            me.next = newNode;
+            me.next.previous = me;
+        }
+    };
 
-function DoublyLinkedList() {
-    this._length = 0;
-    this._head = null;
-    this._tail = null;
+    this.insertBefore = function(newNode){
+        if(this.previous !== null){
+            newNode.previous = this.previous;
+            newNode.next = this;
+            newNode.previous.next = newNode;
+            newNode.next.previous = newNode;
+        }
+        else {
+            this.previous = newNode;
+            newNode.next = this;
+        }
+    };
 }
 
-DoublyLinkedList.prototype = {
+function createList(listStart){
+    var position = listStart;
+    if(position === null)
+    {
+        console.log("AHHHHH!!! ITS NULLL!");
+        return;
+    }
+    while(position.next !== null){
+        console.log(position.value);
+        position = position.next;
+    }
+    console.log(position.value);
+}
 
-    add: function (data){
+var myNode = new Node(1);
 
-        //create a new item object, place data in
-        var node = {
-            data: data,
-            next: null,
-            prev: null
-        };
+myNode.insertItemAfter(new Node(2));
+myNode.insertItemAfter(new Node(3));
 
-        //special case: no items in the list yet
-        if (this._length == 0) {
-            this._head = node;
-            this._tail = node;
-        } else {
+myNode.next.next.insertBefore(new Node(8));
 
-            //attach to the tail node
-            this._tail.next = node;
-            node.prev = this._tail;
-            this._tail = node;
-        }
+createList(myNode);
+console.log('-------------');
+myNode.insertItemAfter(new Node(4));
+myNode.insertItemAfter(new Node(5));
+myNode.insertItemAfter(new Node(6));
+myNode.insertItemAfter(new Node(7));
 
-        //don't forget to update the count
-        this._length++;
+createList(myNode);
 
-    },
+console.log("The New list - 5");
 
-    //more methods here
-};
+myNode.next.next.removeNext();
 
-console.log(this._tail);
-DoublyLinkedList();
-
+createList(myNode);
