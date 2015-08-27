@@ -75,20 +75,14 @@ var myNode = new Node(1);
 
 myNode.insertItemAfter(new Node(2));
 myNode.insertItemAfter(new Node(3));
-
 myNode.next.next.insertBefore(new Node(8));
-
 createList(myNode);
-console.log('-------------');
+console.log('CREATING LIST');
 myNode.insertItemAfter(new Node(4));
 myNode.insertItemAfter(new Node(5));
 myNode.insertItemAfter(new Node(6));
 myNode.insertItemAfter(new Node(7));
-
 createList(myNode);
-
-console.log("The New list - 5");
-
+console.log("CREATING LIST - 5");
 myNode.next.next.removeNext();
-
 createList(myNode);
