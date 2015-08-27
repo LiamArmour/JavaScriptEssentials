@@ -2,7 +2,6 @@ function Node(valueOfNode){
     var me = this;
     me.value = valueOfNode;
     me.next = null;
-
     me.removeNext = function(){
         if(me.next === null){
             return;
@@ -26,7 +25,6 @@ function Node(valueOfNode){
         }
     };
 }
-
 function createList(head){
     var position = head;
     if(position === null)
