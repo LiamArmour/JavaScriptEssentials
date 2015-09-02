@@ -1,8 +1,7 @@
-'use strict'
-var celsius = 20;
-
-F = celsius * 9 / 5 + 32;
-
-var fahrenheit = Math.round(F);
-
-console.log(fahrenheit);
+'use strict';
+function convert (){
+    var celc = 12;
+    var faren = ((celc * 2) +30);
+    console.log(celc +" degrees celsius equates to: "+faren + " "+ "farenheit");
+}
+convert();
