@@ -1,9 +1,7 @@
 'use strict'
-var Hypo=0;
-var findHypo=function(number1,number2){
-    Hypo=Math.sqrt(((number1*number1)+(number2*number2)));
+var hypotenuseLength=0;
+var findhypotenuseLength=function(valueOne,valueTwo){
+    hypotenuseLength=Math.sqrt(((valueOne * valueOne)+(valueTwo * valueTwo)));
 }
-
-findHypo(3,4);
-
-console.log(Hypo);
+findhypotenuseLength(3,4);
+console.log(hypotenuseLength);

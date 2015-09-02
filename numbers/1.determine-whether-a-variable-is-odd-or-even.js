@@ -1,5 +1,5 @@
-var foo =1;
-if(foo%2===0){
+var number =1;
+if(number%2===0){
     console.log("this number is even!");
 }
 else{

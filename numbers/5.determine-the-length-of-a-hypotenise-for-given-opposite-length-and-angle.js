@@ -1,6 +1,6 @@
 'use strict'
-findHypo(3,4);
-console.log(Hypo);
+findhypotenuseLength(3,4);
+console.log(hypotenuseLength);
 
 var hyLength = 0;
 var trigCalc = function(length,angle){
@@ -10,7 +10,7 @@ trigCalc(12,30);
 console.log(hyLength);
 
 /*
- var Hypo=0;
- var findHypo=function(number1,number2){
- Hypo=Math.sqrt(((number1*number1)+(number2*number2)));
+ var hypotenuseLength=0;
+ var findhypotenuseLength=function(number1,number2){
+ hypotenuseLength=Math.sqrt(((number1*number1)+(number2*number2)));
  } */

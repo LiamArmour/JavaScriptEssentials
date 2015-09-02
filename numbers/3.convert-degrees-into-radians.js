@@ -1,7 +1,7 @@
 'use strict'
-var convertRad =0;
-var convertDeg=function(number){
-    convertRad=((Math.PI/180)*number);
+var convertRadius =0;
+var convertDegrees=function(value){
+    convertRadius=((Math.PI/180) * value);
 }
 convertDeg(345);
 console.log(convertRad);
