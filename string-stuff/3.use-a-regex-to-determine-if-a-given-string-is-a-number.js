@@ -1,8 +1,7 @@
-var queryNumber = function(query){
-    if(isNaN(query)===true){
-        console.log("This is not a number");
-    }
-    else{
-        console.log("this is a number");
-    }
+'use strict';
+
+var queryNumber = function(query) {
+    query = query.replace(/\s/g, ""); //gets rid of white space
+    var regex = /[0-9]+/i;
+    return regex.test(query);
 }
