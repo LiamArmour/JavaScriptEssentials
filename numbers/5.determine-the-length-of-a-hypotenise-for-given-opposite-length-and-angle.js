@@ -1,16 +1,11 @@
 'use strict'
-findhypotenuseLength(3,4);
-console.log(hypotenuseLength);
+//finding the hypotenuse length
+var perplength = 8;
+var base = 4;
+var oppositeLength= 11;
+var angle = 73;
+var hypoth = ((perplength*perplength) + (base*base));
+var hypotenuse = Math.sin(angle)*oppositeLength;
 
-var hyLength = 0;
-var trigCalc = function(length,angle){
-    hyLength= Math.sin(angle)*length;
-}
-trigCalc(12,30);
-console.log(hyLength);
-
-/*
- var hypotenuseLength=0;
- var findhypotenuseLength=function(number1,number2){
- hypotenuseLength=Math.sqrt(((number1*number1)+(number2*number2)));
- } */
+console.log("The Hypotenuse length is: " + Math.round(Math.sqrt(hypoth)));
+console.log("The Hypotenuse length is: " + hypotenuse + " radians");

@@ -1,10 +1,10 @@
 'use strict';
-var diceRoll = function(sides) {
+var rollDice = function(sides) {
     this.sides = sides || 6;
 }
-diceRoll.prototype.roll = function() {
+rollDice.prototype.roll = function() {
     return Math.floor((Math.random()*this.sides)+1);
 }
-var die = new diceRoll();
+var die = new rollDice();
 
 console.log(die.roll());
