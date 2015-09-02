@@ -1,9 +1,8 @@
 'use strict'
-var opp = 20;
-var adj = 19;
+var Hypo=0;
+var findHypo=function(number1,number2){
+    Hypo=Math.sqrt(((number1*number1)+(number2*number2)));
+}
+findHypo(3,4);
 
-var calHypo = function(opp, adj);
-
-var result = (opp * opp) + (adj * adj);
-
-var hypo = math.sqrt(result);
+console.log(Hypo);
